@@ -1,7 +1,9 @@
 # direct copy from terraform-docs README
 name: Generate terraform docs
 on:
-  - pull_request
+  push:
+    branches:
+      - development
 
 jobs:
   docs:
