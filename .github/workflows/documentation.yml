@@ -20,3 +20,5 @@ jobs:
         output-file: README.md
         output-method: inject
         git-push: "true"
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
