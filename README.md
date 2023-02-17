@@ -1,3 +1,18 @@
+# OCI free tier A1 compute
+
+OCI offers a free forever (?) account where there is a number of A1 cpus available for use
+This repo contains sample terraform code to spin up the largest one available in the free tier (4 ocpu, 24GB of memory).
+It will generate a compartment for all the resources, a vcn, a private and public subnet and sample security lists for each. It will also provide a public ip where you can use to ssh to the machine.
+As is it will try to use the latest available Canonical ubuntu image.
+
+# Prerequisites
+- an OCI account
+- a set of public/private key for ssh (use ssh-keygen for this)
+
+# known issues
+- vcn module version above 3.3.0 fails
+# terraform-docs generated using github action
+-----
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
