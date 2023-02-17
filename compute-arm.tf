@@ -1,6 +1,10 @@
 # variables used here
-variable "ssh_authorized_keys" {}
-variable "ssh_private_key_path" {}
+variable "ssh_authorized_keys" {
+  description = "SSH authorised keys to add in authorised keys in the VM. Normally just a .pub is sufficient."
+}
+variable "ssh_private_key_path" {
+  description = "The filename to your private key matching a key in authorised keys. Is used by any remote exec provisioner."
+}
 
 # arm (Ampere1) resource
 resource "oci_core_instance" "a1" {
@@ -48,9 +52,11 @@ resource "oci_core_instance" "a1" {
 # }
 
 output "public-ip-for-arm-ubuntu" {
+  description = "The public ip of the compute instance"
   value = oci_core_instance.a1.public_ip
 }
 
 output "instance-name" {
+  description = "The display name (and hostname) of the compute instance"
   value = oci_core_instance.a1.display_name
 }
