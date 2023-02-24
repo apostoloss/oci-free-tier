@@ -3,16 +3,22 @@
 OCI offers a free forever (?) account where there is a number of A1 cpus available for use
 This repo contains sample terraform code to spin up the largest one available in the free tier (4 ocpu, 24GB of memory).
 It will generate a compartment for all the resources, a vcn, a private and public subnet and sample security lists for each. It will also provide a public ip where you can use to ssh to the machine.
-As is it will try to use the latest available Canonical ubuntu image.
+As is, it will try to use the latest available Canonical ubuntu image.
 
 # Prerequisites
 - an OCI account
 - a set of public/private key for ssh (use ssh-keygen for this)
 
+# policies and compartments
+Consider adding restrictions to a compartment and apply policies to a group with a user so that a CI/CD can only access that compartment resources. This way governance is kept outside of any automation and can be manipulated via the oracle cloud web UI.
+
+Have a look (here)[https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/tf-compartment/01-summary.htm]
+
+
 # known issues
 - vcn module version above 3.3.0 fails
-# terraform-docs generated using github action
------
+---
+## terraform-docs (generated using github action)
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
