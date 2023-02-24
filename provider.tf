@@ -1,8 +1,23 @@
-variable "tenancy_ocid" {}
-variable "user_ocid" {}
-variable "fingerprint" {}
-variable "private_key_path" {}
-variable "region" {}
+variable "tenancy_ocid" {
+  description = "Your OCI tenant ocid."
+  type        = string
+}
+variable "user_ocid" {
+  description = "Your OCI user ocid."
+  type        = string
+}
+variable "fingerprint" {
+  description = "Your OCI private key fingerprint"
+  type        = string
+}
+variable "private_key_path" {
+  description = "Your OCI key path"
+  type        = string
+}
+variable "region" {
+  description = "The region of your OCI account"
+  type        = string
+}
 
 provider "oci" {
   tenancy_ocid     = var.tenancy_ocid
