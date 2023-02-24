@@ -53,6 +53,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_compartment_name"></a> [compartment\_name](#input\_compartment\_name) | Provide the name of the compartment to be created. All resources will then be created within this compartment | `string` | n/a | yes |
 | <a name="input_compartment_ocid"></a> [compartment\_ocid](#input\_compartment\_ocid) | Create a compartment for terraform generated resources | `any` | `null` | no |
 | <a name="input_fingerprint"></a> [fingerprint](#input\_fingerprint) | Your OCI private key fingerprint | `string` | n/a | yes |
 | <a name="input_operating_system"></a> [operating\_system](#input\_operating\_system) | The Operating System of the platform image to use. Valid values are "Canonical Ubuntu", "Oracle Linux", or "Oracle Linux Cloud Developer". | `string` | `"Canonical Ubuntu"` | no |
