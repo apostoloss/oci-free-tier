@@ -3,7 +3,7 @@
 variable "operating_system" {
   description = "The Operating System of the platform image to use. Valid values are \"Canonical Ubuntu\", \"Oracle Linux\", or \"Oracle Linux Cloud Developer\"."
   type        = string
-  default = "Canonical Ubuntu"
+  default     = "Canonical Ubuntu"
 
   validation {
     condition     = contains(["Canonical Ubuntu", "Oracle Linux", "Oracle Linux Cloud Developer"], var.operating_system)
@@ -19,12 +19,12 @@ variable "operating_system" {
 
 
 data "oci_core_images" "os" {
-  compartment_id           = var.tenancy_ocid
-  operating_system         = var.operating_system
+  compartment_id   = var.tenancy_ocid
+  operating_system = var.operating_system
   # operating_system_version = var.operating_system_version
-  shape                    = "VM.Standard.A1.Flex"
-  sort_by                  = "TIMECREATED"
-  sort_order               = "DESC"
+  shape      = "VM.Standard.A1.Flex"
+  sort_by    = "TIMECREATED"
+  sort_order = "DESC"
 }
 
 output "os_image_used" {

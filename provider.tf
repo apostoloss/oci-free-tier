@@ -1,22 +1,22 @@
 variable "tenancy_ocid" {
   description = "Your OCI tenant ocid."
-  type = string
+  type        = string
 }
 variable "user_ocid" {
   description = "Your OCI user ocid."
-  type = string
+  type        = string
 }
 variable "fingerprint" {
   description = "Your OCI private key fingerprint"
-  type = string
+  type        = string
 }
 variable "private_key_path" {
   description = "Your OCI key path"
-  type = string
+  type        = string
 }
 variable "region" {
   description = "The region of your OCI account"
-  type = string
+  type        = string
 }
 
 provider "oci" {

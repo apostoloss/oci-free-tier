@@ -11,7 +11,7 @@ resource "oci_core_instance" "a1" {
   # Required
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   compartment_id      = oci_identity_compartment.tf-compartment.id
-  shape = "VM.Standard.A1.Flex"
+  shape               = "VM.Standard.A1.Flex"
 
   # Free tier is limited to 4OCPU & 24GB
   shape_config {
@@ -20,7 +20,7 @@ resource "oci_core_instance" "a1" {
   }
   source_details {
     source_type = "image"
-    source_id   = data.oci_core_images.os.images[0].id  # check images.tf
+    source_id   = data.oci_core_images.os.images[0].id # check images.tf
   }
 
   # Optional
@@ -53,10 +53,10 @@ resource "oci_core_instance" "a1" {
 
 output "public-ip-for-arm-ubuntu" {
   description = "The public ip of the compute instance"
-  value = oci_core_instance.a1.public_ip
+  value       = oci_core_instance.a1.public_ip
 }
 
 output "instance-name" {
   description = "The display name (and hostname) of the compute instance"
-  value = oci_core_instance.a1.display_name
+  value       = oci_core_instance.a1.display_name
 }
