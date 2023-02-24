@@ -26,3 +26,11 @@ provider "oci" {
   private_key_path = var.private_key_path
   region           = var.region
 }
+
+terraform {
+  required_providers {
+    oci = {
+      source = "oracle/oci"
+    }
+  }
+}

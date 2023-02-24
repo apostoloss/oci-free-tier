@@ -40,14 +40,14 @@ No requirements.
 
 | Name | Type |
 |------|------|
-| [oci_core_instance.a1](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance) | resource |
-| [oci_core_security_list.private-security-list](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_security_list) | resource |
-| [oci_core_security_list.public-security-list](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_security_list) | resource |
-| [oci_core_subnet.vcn-private-subnet](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet) | resource |
-| [oci_core_subnet.vcn-public-subnet](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet) | resource |
-| [oci_identity_compartment.tf-compartment](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/identity_compartment) | resource |
-| [oci_core_images.os](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_images) | data source |
-| [oci_identity_availability_domains.ads](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/identity_availability_domains) | data source |
+| [oci_core_instance.a1](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_instance) | resource |
+| [oci_core_security_list.private-security-list](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_security_list) | resource |
+| [oci_core_security_list.public-security-list](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_security_list) | resource |
+| [oci_core_subnet.vcn-private-subnet](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_subnet) | resource |
+| [oci_core_subnet.vcn-public-subnet](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_subnet) | resource |
+| [oci_identity_compartment.tf-compartment](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/identity_compartment) | resource |
+| [oci_core_images.os](https://registry.terraform.io/providers/oracle/oci/latest/docs/data-sources/core_images) | data source |
+| [oci_identity_availability_domains.ads](https://registry.terraform.io/providers/oracle/oci/latest/docs/data-sources/identity_availability_domains) | data source |
 
 ## Inputs
 
